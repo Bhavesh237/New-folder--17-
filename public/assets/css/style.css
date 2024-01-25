@@ -2552,7 +2552,34 @@ body #root{
     cursor: pointer;
     height: 100%;
   }
+
+  
 }
+.upload-link1 {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  line-height: 32px;
+  background: #38CEBB;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  box-shadow: 0 0 10px 0 rgba(0, 24, 128, 0.1);
+  border-radius: 100%;
+  color: #fff;
+  overflow: hidden;
+  border: 2px solid #fff;
+  .update-flie1 {
+    position: absolute;
+    opacity: 0;
+    z-index: 0;
+    width: 100%;
+    cursor: pointer;
+    height: 100%;
+  }
+}
+
 .author-profile .upload-link .update-flie {
   position: absolute;
   opacity: 0;
@@ -2927,7 +2954,7 @@ body.modal-bounce-zoom {
             @media only screen and (max-width: 35.9375rem) {
               .profile-back .social-btn .btn.btn-primary {
                 margin-bottom: 0.5rem; } }
-          .profile-back:after {
+          .profile-back::before {
             position: absolute;
             content: "";
             height: 100%;

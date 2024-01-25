@@ -1069,7 +1069,17 @@ const Home = () => {
         <div className="row">
           <div className="col-xl-12">
             <div className="profile-back">
-              <img src="/assets/img/profile1.jpg" alt="" />
+              <img src="/assets/img/profile1.jpg" alt="" />              
+              <div
+                className="upload-link1"
+                title=""
+                data-bs-toggle="tooltip"
+                data-placement="right"
+                data-original-title="update"
+              >
+                <input type="file" className="update-flie1" />
+                <i class="bi bi-camera"></i>
+              </div>
             </div>
             <div className="profile-pic d-flex">
               <img src="/assets/img/pic1.jpg" alt="" />
