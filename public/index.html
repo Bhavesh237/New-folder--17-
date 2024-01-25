@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" integrity="sha384-rbs5kfsvMz9ATSHjzS0Ju13t4FbG8f5iSvVtgI6beFJw9G5CcmmfoJ3caNrdF4bO" crossorigin="anonymous">
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+    
+    <!-- <link rel="stylesheet" href="jmpp.css" /> -->
+   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/jmpp.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Versatribe </title>
+    <base href="%PUBLIC_URL%/">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="module" src="/src/main.jsx"></script>
+    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/chart.js/chart.umd.js"></script>
+    <script src="assets/vendor/echarts/echarts.min.js"></script>
+    <script src="assets/vendor/quill/quill.min.js"></script>
+    <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      document.getElementById("addSkillBtn").addEventListener("click", function () {
+        const skillName = document.getElementById("skillName").value;
+  
+  
+        const skillButton = document.createElement("div");
+        skillButton.classList.add("btn", "btn-primary");
+        skillButton.style.marginLeft = "4px"
+  
+        
+        const skillNameButton = document.createElement("button");
+        skillNameButton.type = "button";
+        skillNameButton.classList.add("btn", "btn-primary");
+        skillNameButton.style.padding = "0px";
+        skillNameButton.style.marginTop = "-5px";
+        skillNameButton.textContent = skillName;
+  
+       
+        const removeIcon = document.createElement("i");
+        removeIcon.classList.add("bi", "bi-x-circle");
+        removeIcon.style.margin = "4px"
+        removeIcon.addEventListener("click", function () {
+          removeSkillDiv(skillButton);
+        });
+  
+       
+        const editIcon = document.createElement("i");
+        editIcon.classList.add("bi", "bi-pencil-square");
+        editIcon.addEventListener("click", function () {
+          toggleskill(); 
+        });
+  
+        
+        skillButton.appendChild(skillNameButton);
+        skillButton.appendChild(removeIcon);
+        skillButton.appendChild(editIcon);
+  
+       
+        const skillsContainer = document.getElementById("skillsContainer");
+        skillsContainer.appendChild(skillButton);
+  
+      
+        document.getElementById("skillName").value = "";
+        document.getElementById("experience").value = "";
+      });
+  
+      function removeSkillDiv(skillButton) {
+       
+        const skillsContainer = document.getElementById("skillsContainer");
+        skillsContainer.removeChild(skillButton);
+      }
+  
+      function toggleskill() {
+      
+      }
+  
+      document.getElementById("addHobbyBtn").addEventListener("click", function () {
+        const hobbyName = document.getElementById("hobbyName").value;
+  
+       
+        const hobbyButton = document.createElement("div");
+        hobbyButton.classList.add("btn", "btn-primary");
+        hobbyButton.style.marginLeft = "4px";
+  
+       
+        const hobbyNameButton = document.createElement("button");
+        hobbyNameButton.type = "button";
+        hobbyNameButton.classList.add("btn", "btn-primary");
+        hobbyNameButton.style.padding = "0px";
+        hobbyNameButton.style.marginTop = "-5px";
+        hobbyNameButton.textContent = hobbyName;
+  
+       
+        const removeIcon = document.createElement("i");
+        removeIcon.classList.add("bi", "bi-x-circle");
+        removeIcon.style.margin = "4px";
+        removeIcon.addEventListener("click", function () {
+          removeHobbyDiv(hobbyButton);
+        });
+  
+        // Create the edit icon
+        const editIcon = document.createElement("i");
+        editIcon.classList.add("bi", "bi-pencil-square");
+        editIcon.addEventListener("click", function () {
+          toggleHobby(); // You can handle editing functionality here
+        });
+  
+        // Append the hobby name and icons to the hobby button div
+        hobbyButton.appendChild(hobbyNameButton);
+        hobbyButton.appendChild(removeIcon);
+        hobbyButton.appendChild(editIcon);
+  
+        // Append the hobby button to the hobbies container
+        const hobbiesContainer = document.getElementById("hobbiesContainer");
+        hobbiesContainer.appendChild(hobbyButton);
+  
+        // Clear input fields
+        document.getElementById("hobbyName").value = "";
+      });
+  
+      function removeHobbyDiv(hobbyButton) {
+        // Remove the hobby button div from the container
+        const hobbiesContainer = document.getElementById("hobbiesContainer");
+        hobbiesContainer.removeChild(hobbyButton);
+      }
+  
+      function toggleHobby() {
+        // Handle editing functionality for hobbies here
+      }
+    </script>
+  </body>
+</html>

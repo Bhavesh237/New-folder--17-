@@ -1,0 +1,98 @@
+button.nav-link11 {
+  display: block;
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+  font-size: var(--bs-dropdown-font-size);
+  font-weight: var(--bs-nav-link-font-weight);
+  color: var(--bs-nav-link-color);
+  text-decoration: none;
+  background: 0 0;
+  border: 0;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+  margin-left: 15px;
+}
+button.removee {
+  margin-left: 10px;
+}
+.col-md-8.col-lg-8 {
+  display: inline-block !important;
+}
+li {
+  list-style: none;
+  margin-top: 1px;
+}
+
+li.auto {
+  list-style: none;
+  margin-top: 3px;
+}
+
+ul.autocomplete-list {
+  /* border: 1px solid black; */
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+}
+.org {
+  padding: 0px 0px 0px 3px !important;
+}
+
+
+
+/* Add this to your CSS file */
+.full-screen-spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.card1 {
+  width: 24% !important;
+}
+
+span.org {
+  font-size: 18px;
+  font-weight: 400;
+  color: #38cebb;
+  font-family: "Poppins", sans-serif;
+}
+/* Add this CSS to your stylesheet */
+
+.modal-backdrop.fade.show {
+  z-index: 0 !important;
+}
+.modal-content {
+  width: inherit !important;
+}
+p.request {
+  padding-top: 17px;
+}
+.mt_org_1 {
+  padding-bottom: 10px;
+}
+i.btn.btn-primary.mr_right_10 {
+  font-family: sans-serif;
+}
+.selectr {
+  display: none;
+}
+.modal-body.modal-dialog_123 
+{width: 100%;/* display: flex; *//* margin: auto; */margin-left: 236px;}
